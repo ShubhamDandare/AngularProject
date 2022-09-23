@@ -13,6 +13,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FormsComponent } from './components/forms/forms.component';
+import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
+import { SearchBooksComponent } from './search-books/search-books.component';
+import { CreateBookComponent } from './create-book/create-book.component';
 
 
 
@@ -23,7 +27,11 @@ import { FormsComponent } from './components/forms/forms.component';
 
     AppComponent,
 
-    FormsComponent
+    FormsComponent,
+     SignupComponent,
+     SigninComponent,
+     SearchBooksComponent,
+     CreateBookComponent
 
   ],
 

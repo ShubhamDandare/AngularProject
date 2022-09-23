@@ -17,53 +17,21 @@ import { UserService } from 'src/app/user.service';
 export class FormsComponent implements OnInit {
 
  user={
-
    name:"",
-
    age:0
-
 }
-
-
-
   save(){
-
-    // console.log(this.Username);
-
-    // console.log(this.Password)
-
     const observable=this.userService.createUser(this.user);
-
     observable.subscribe(
-
       (Response:any)=>{
-
         console.log(Response);
-
       },
-
       function(error){
-
         alert("Something went wrong Please try again")
-
       }
-
       )
-
-     
-
   }
-
-
-
   constructor(private userService:UserService) { }
-
-
-
   ngOnInit(): void {
-
   }
-
-
-
 }
