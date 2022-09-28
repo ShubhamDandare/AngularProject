@@ -17,6 +17,8 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { SearchBooksComponent } from './search-books/search-books.component';
 import { CreateBookComponent } from './create-book/create-book.component';
+import { HeaderComponent } from './header/header.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -31,7 +33,8 @@ import { CreateBookComponent } from './create-book/create-book.component';
      SignupComponent,
      SigninComponent,
      SearchBooksComponent,
-     CreateBookComponent
+     CreateBookComponent,
+     HeaderComponent
 
   ],
 
@@ -43,7 +46,8 @@ import { CreateBookComponent } from './create-book/create-book.component';
 
     FormsModule,
 
-    HttpClientModule
+    HttpClientModule,
+     NgbModule
 
   ],
 
