@@ -28,7 +28,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   declarations: [
 
     AppComponent,
-
     FormsComponent,
      SignupComponent,
      SigninComponent,

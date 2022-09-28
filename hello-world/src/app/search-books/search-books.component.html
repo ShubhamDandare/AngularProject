@@ -1,10 +1,50 @@
-<p>search-books works!</p>
-title : <input type="text" [(ngModel)]="book.title"> <br>
-
-author : <input type="text" [(ngModel)]="book.author"> <br>
-
-publisher : <input type="text" [(ngModel)]="book.publisher"> <br>
-
-releasedate : <input type="text" [(ngModel)]="book.releasedate"> <br>
-
-<button type="button" (click)="SearchBook()" >searchbook</button>
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">SearchBooks</a>
+</nav>
+<div class="container">
+<form class="needs-validation" novalidate>
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom01">Title </label>
+        <input type="text" [(ngModel)]="book.title" name=title
+         [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom01" 
+        placeholder="Title"  required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom04">Publisher </label>
+        <input type="text" [(ngModel)]="book.publisher" name=publisher 
+         [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom04" 
+        placeholder="enter publisher"  required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom02">Author </label>
+        <input type="text" [(ngModel)]="book.author" name=author 
+         [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom02" 
+        placeholder="enter author"  required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom03">Release Date </label>
+        <input type="text" [(ngModel)]="book.releasedate " name=releasedate  
+         [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom03" 
+        placeholder="enter releasedate "  required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div>
+    <button class="btn btn-primary" type="button" (click)="SearchBook()" >Search Books</button>
+    </div>
+</form>
+</div>
+    
+      

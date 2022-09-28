@@ -10,7 +10,9 @@ export class UserService {
 Sign_Up_URL="http://localhost:8181/user/auth/signup"
 Sign_In_URL= "http://localhost:8181/user/auth/signin"
 
-SignIn(user:{username:String,password:String}){
+SignIn(user:
+               {username:String,password:String}
+  ){
   return this.http.post(this.Sign_In_URL,user)}
 
 SignUp(user:{username:String,password:String,email:String,role:String}){

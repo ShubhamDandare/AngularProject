@@ -8,7 +8,7 @@
     <div class="form-row">
       <div class="col-md-4 mb-3">
         <label for="validationCustom01">username</label>
-        <input type="text" [(ngModel)]="user.username" class="form-control" id="validationCustom01" 
+        <input type="text" [(ngModel)]="user.username" name=username [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom01" 
         placeholder="username"  required>
         <div class="valid-feedback">
           Looks good!
@@ -16,7 +16,7 @@
       </div>
       <div class="col-md-4 mb-3">
         <label for="validationCustom02">password</label>
-        <input type="text" [(ngModel)]="user.password" class="form-control" id="validationCustom02" 
+        <input type="text" [(ngModel)]="user.password" name=password [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom02" 
         placeholder="password"  required>
         <div class="valid-feedback">
           Looks good!
