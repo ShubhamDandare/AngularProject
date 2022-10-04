@@ -19,6 +19,8 @@ import { SearchBooksComponent } from './search-books/search-books.component';
 import { CreateBookComponent } from './create-book/create-book.component';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BuyBookComponent } from './buy-book/buy-book.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 
 
@@ -33,7 +35,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
      SigninComponent,
      SearchBooksComponent,
      CreateBookComponent,
-     HeaderComponent
+     HeaderComponent,
+     BuyBookComponent,
+     SearchResultComponent
 
   ],
 

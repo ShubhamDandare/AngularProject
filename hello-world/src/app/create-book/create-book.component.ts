@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BookService } from '../book.service';
 
 @Component({
@@ -11,6 +12,7 @@ export class CreateBookComponent implements OnInit {
     title:"",
     category:"",
     image:"",
+    author:"",
     price:"",
     publisher:"",
     active:"",
@@ -21,6 +23,8 @@ export class CreateBookComponent implements OnInit {
   observable.subscribe(
     (Response:any)=>{
       console.log(Response);
+      sessionStorage.setItem('credential',JSON.stringify(Response));
+      this.router.navigate(['searchbooks']);
     },
     function(error){
       alert("Something went wrong Please try again")
@@ -28,7 +32,7 @@ export class CreateBookComponent implements OnInit {
     )
 
  }
-  constructor(private bookService:BookService) { }
+  constructor(private bookService:BookService,private router:Router) { }
 
   ngOnInit(): void {
   }

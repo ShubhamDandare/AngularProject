@@ -16,12 +16,21 @@ export class SigninComponent implements OnInit {
   const observable=this.userService.SignIn(this.user);
   observable.subscribe(
     (Response:any)=>{
+      if(Response.role=='ROLE_READER'){
+        this.router.navigate(['searchbooks'])
+      }
+      else if(Response.role=='ROLE_AUTHOR'){
+        this.router.navigate(['savebook'])
+      }
       console.log(Response);
       sessionStorage.setItem('credential',JSON.stringify(Response));
-      this.router.navigate([''])
+      // this.router.navigate(['savebook'])
     },
     function(error){
       alert("Something went wrong Please try again")
+    },()=>{
+      this.router.navigate(['searchbooks'])
+
     }
     )
  }

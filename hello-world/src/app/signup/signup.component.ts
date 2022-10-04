@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Component({
@@ -21,10 +22,13 @@ export class SignupComponent implements OnInit {
     },
     function(error){
       alert("Something went wrong Please try again")
+    },()=>{
+      this.router.navigate(['signin'])
+
     }
     )
  }
-  constructor(private userService:UserService) { }
+  constructor(private userService:UserService,private router:Router) { }
 
   ngOnInit(): void {
   }

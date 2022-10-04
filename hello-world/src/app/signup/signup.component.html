@@ -1,70 +1,59 @@
+<section class="h-100 h-custom" style="background-color: #8fc4b7;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <img src="https://digitalready.tas.gov.au/assets/media/images/ecommerce-flatbook.width-1200.png"
+            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+            alt="Sample photo">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">SignUp Page</a>
-</nav>
-<div class="container">
-<form class="needs-validation" novalidate>
-    <div class="form-row">
-      <div class="col-md-4 mb-3">
-        <label for="validationCustom01">username</label>
-        <input type="text" [(ngModel)]="user.username" class="form-control" id="validationCustom01" 
-        placeholder="username"  required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationCustom02">password</label>
-        <input type="text" [(ngModel)]="user.password" class="form-control" id="validationCustom02" 
-        placeholder="password"  required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationCustomUsername">Email</label>
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <form class="px-md-2">
+
+              <div class="form-outline mb-4">
+                <input type="text" [(ngModel)]="user.username"  placeholder="username"  id="form3Example1q" class="form-control" />
+                <label class="form-label" for="form3Example1q">username</label>
+              </div>
+
+              <div class="form-outline mb-4">
+                <input type="password" [(ngModel)]="user.password"  placeholder="password" id="form3Example4cg" class="form-control form-control-lg" />
+                <label class="form-label" for="form3Example4cg">Password</label>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <label for="validationCustomUsername">Email</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                  </div>
+                  <input type="text" [(ngModel)]="user.email" class="form-control" id="validationCustomUsername"
+                   placeholder="Email" aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Please choose a Email.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4">
+
+                <select class="select">
+                  <option value="1" >Roles</option>
+                  <option value="2">USER_AUTHOR</option>
+                  <option value="3">USER_READER</option>
+                </select>
+
+              </div>
+
+              <button class="btn btn-success btn-lg mb-1" type="button" (click)="SignUp()" >signup</button>
+
+              <p class="text-center text-muted mt-5 mb-0">Have already an account? 
+                <a href="signin" class="fw-bold text-body"><u>Login here</u></a></p>
+
+            </form>
+
           </div>
-          <input type="text" [(ngModel)]="user.email" class="form-control" id="validationCustomUsername"
-           placeholder="Email" aria-describedby="inputGroupPrepend" required>
-          <div class="invalid-feedback">
-            Please choose a Email.
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationCustom02">Role</label>
-        <input type="text" [(ngModel)]="user.role" class="form-control" id="validationCustom02" 
-        placeholder="Role"  required>
-        <div class="valid-feedback">
-          Looks good!
         </div>
       </div>
     </div>
-    
-    <button class="btn btn-primary" type="button" (click)="SignUp()" >signup</button>
-  </form>
-</div>
-  
-  <script>
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
-  (function() {
-    'use strict';
-    window.addEventListener('load', function() {
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      var forms = document.getElementsByClassName('needs-validation');
-      // Loop over them and prevent submission
-      var validation = Array.prototype.filter.call(forms, function(form) {
-        form.addEventListener('submit', function(event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    }, false);
-  })();
-  </script>
+  </div>
+</section>

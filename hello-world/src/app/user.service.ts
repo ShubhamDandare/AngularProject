@@ -6,9 +6,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
+  Sign_Up_URL="http://13.114.51.95:8181/user/auth/signup"
+  Sign_In_URL= "http://13.114.51.95:8181/user/auth/signin"
   BASE_URL="http://localhost:5100/user"
-Sign_Up_URL="http://localhost:8181/user/auth/signup"
-Sign_In_URL= "http://localhost:8181/user/auth/signin"
+//Sign_Up_URL="http://localhost:8181/user/auth/signup"
+//Sign_In_URL= "http://localhost:8181/user/auth/signin"
 
 SignIn(user:
                {username:String,password:String}

@@ -1,12 +1,31 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">CreateBooks</a>
+    <a class="navbar-brand" href="savebook">CreateBooks</a>
 </nav>
+<html>
+  <style>
+    body {
+      background-image: url('https://th.bing.com/th/id/OIP.a_42C1PrjXKRsMWkt7jN6gHaEK?w=309&h=180&c=7&r=0&o=5&pid=1.7');
+
+      /* background-image: url('https://consulterce.com/wp-content/uploads/2020/05/best-ecommerce-books-article-cover.png');
+      */
+      /* background-color: lightgreen ; */
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+  background-size: 100% 100%;
+    }
+    </style>
+<body>
+
 <div class="container">
+  
+
 <form class="needs-validation" novalidate>
+  
+  
     <div class="form-row">
       <div class="col-md-4 mb-3">
-        <label for="validationCustom01">Title </label>
+        <label for="validationCustom01" style="background-color: black;color: white;">Title </label>
         <input type="text" [(ngModel)]="book.title" name=title
          [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom01" 
         placeholder="Title"  required>
@@ -15,7 +34,7 @@
         </div>
       </div>
       <div class="col-md-4 mb-3">
-        <label for="validationCustom02">Category </label>
+        <label for="validationCustom02"  style="background-color: black;color: white;">Category </label>
         <input type="text" [(ngModel)]="book.category" name=category 
          [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom02" 
         placeholder="category"  required>
@@ -26,10 +45,10 @@
       <div class="custom-file">
         <input type="file" [(ngModel)]="book.image" name=image 
         [ngModelOptions]="{standalone: true}" class="custom-file-input" id="customFile">
-        <label class="custom-file-label" for="customFile">Upload Image </label>
+        <label class="custom-file-label" for="customFile" style="background-color: black;color: white;">Upload Image </label>
       </div>
       <div class="col-md-4 mb-3">
-        <label for="validationCustom03">Price </label>
+        <label for="validationCustom03" style="background-color: black;color: white;">Price </label>
         <input type="text" [(ngModel)]="book.price" name=price 
          [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom03" 
         placeholder="enter price"  required>
@@ -38,7 +57,16 @@
         </div>
       </div>
       <div class="col-md-4 mb-3">
-        <label for="validationCustom04">Publisher </label>
+        <label for="validationCustom08" style="background-color: black;color: white;">Author </label>
+        <input type="text" [(ngModel)]="book.author" name=author 
+         [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom08" 
+        placeholder="enter author"  required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom04" style="background-color: black;color: white;">Publisher </label>
         <input type="text" [(ngModel)]="book.publisher" name=publisher 
          [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom04" 
         placeholder="enter publisher"  required>
@@ -49,10 +77,10 @@
       <div class="custom-control custom-checkbox">
         <input type="checkbox"  [(ngModel)]="book.active" name=active 
         [ngModelOptions]="{standalone: true}" class="custom-control-input" id="customCheck1">
-        <label class="custom-control-label" for="customCheck1">Active</label>
+        <label class="custom-control-label" for="customCheck1" style="background-color: black;color: white;">Active</label>
       </div>
       <div class="col-md-4 mb-3">
-        <label for="validationCustom05">Content </label>
+        <label for="validationCustom05" style="background-color: black;color: white;">Content </label>
         <input type="text" [(ngModel)]="book.content" name=content 
          [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom05" 
         placeholder="enter content"  required>
@@ -66,6 +94,9 @@
   </div>
 </form>
 </div>
+</body>
+</html>
+
 <script>
   // Example starter JavaScript for disabling form submissions if there are invalid fields
   (function() {

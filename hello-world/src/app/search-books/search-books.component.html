@@ -1,37 +1,52 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">SearchBooks</a>
+  <a class="navbar-brand" href="searchbooks">SearchBooks</a>
 </nav>
-<div class="container">
-<form class="needs-validation" novalidate>
-    <div class="form-row">
-      <div class="col-md-4 mb-3">
-        <label for="validationCustom01">Title </label>
-        <input type="text" [(ngModel)]="book.title" name=title
-         [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom01" 
-        placeholder="Title"  required>
-        <div class="valid-feedback">
-          Looks good!
+<html>
+<style>
+  body {
+    /* background-image: url('https://th.bing.com/th/id/OIP.a_42C1PrjXKRsMWkt7jN6gHaEK?w=309&h=180&c=7&r=0&o=5&pid=1.7'); */
+
+    background-image: url('https://consulterce.com/wp-content/uploads/2020/05/best-ecommerce-books-article-cover.png');
+
+    /* background-color: lightgreen ; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    
+  }
+</style>
+
+<body>
+  <div class="container">
+
+
+    <form class="needs-validation" novalidate>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="validationCustom01">Category </label>
+          <input type="text" [(ngModel)]="book.category" name=category [ngModelOptions]="{standalone: true}"
+            class="form-control" id="validationCustom01" placeholder="category" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
         </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationCustom04">Publisher </label>
-        <input type="text" [(ngModel)]="book.publisher" name=publisher 
-         [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom04" 
-        placeholder="enter publisher"  required>
-        <div class="valid-feedback">
-          Looks good!
+        <div class="col-md-4 mb-3">
+          <label for="validationCustom04">Price </label>
+          <input type="text" [(ngModel)]="book.price" name=price [ngModelOptions]="{standalone: true}"
+            class="form-control" id="validationCustom04" placeholder="enter price" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
         </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationCustom02">Author </label>
-        <input type="text" [(ngModel)]="book.author" name=author 
-         [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom02" 
-        placeholder="enter author"  required>
-        <div class="valid-feedback">
-          Looks good!
+        <div class="col-md-4 mb-3">
+          <label for="validationCustom02">Author </label>
+          <input type="text" [(ngModel)]="book.author" name=author [ngModelOptions]="{standalone: true}"
+            class="form-control" id="validationCustom02" placeholder="enter author" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
         </div>
-      </div>
-      <div class="col-md-4 mb-3">
+        <!-- <div class="col-md-4 mb-3">
         <label for="validationCustom03">Release Date </label>
         <input type="text" [(ngModel)]="book.releasedate " name=releasedate  
          [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustom03" 
@@ -39,12 +54,57 @@
         <div class="valid-feedback">
           Looks good!
         </div>
+      </div> -->
       </div>
-    </div>
-    <div>
-    <button class="btn btn-primary" type="button" (click)="SearchBook()" >Search Books</button>
-    </div>
-</form>
-</div>
-    
-      
+      <div>
+        <button class="btn btn-primary" type="button" (click)="SearchBook()">Search Books</button>
+      </div>
+    </form>
+  </div>
+  
+  <!-- <div>
+    <h2>Showing Search Results..</h2>
+  </div> -->
+
+  <!-- <h2>Showing Search Result</h2> -->
+ 
+  <table  *ngIf="showTable">
+     <h2>Showing Search Result</h2>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>publisher</th>
+      <th>Active</th>
+      <th>Content</th>
+      <th>Author</th>
+      <th>PublishDate</th>
+      <th>Isblock</th>
+    </tr>
+    <!-- <li *ngFor='let book of uiResponse'> -->
+
+    <tr *ngFor='let book of uiResponse'>
+      <td>{{book.id}}</td>
+      <td>{{book.category}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.price}}</td>
+      <td>{{book.image}}</td>
+      <td>{{book.content}}</td>
+      <td>{{book.title}}</td>
+      <td>{{book.publisher}}</td>
+      <td>{{book.publishdate}}</td>
+      <td>{{book.isblock}}</td>
+    </tr>
+  <!-- </li> -->
+
+    <!-- <div>
+      <li *ngFor='let book of uiResponse'> {{book.id}} - {{book.category}} - {{book.author}}- {{book.price}}- {{book.image}}-
+        {{book.content}}- {{book.title}}- {{book.publisher}}</li>
+    </div> -->
+  </table>
+  
+</body>
+
+</html>
