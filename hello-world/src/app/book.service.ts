@@ -49,11 +49,9 @@ export class BookService {
     }
 
     BuyBook(book:{
-      title:String,
-      author:String,
-      price:String,
-      image:String,
-      content:String}){
+     username:String,
+    email:String,
+    bookid:String}){ 
   const credentials=sessionStorage.getItem('credential');
   const token:any=JSON.parse(credentials||'{}')['accessToken'];
       return this.http.post(this.BUY_BOOK_URL,book,{

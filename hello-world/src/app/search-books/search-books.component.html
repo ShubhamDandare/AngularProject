@@ -87,15 +87,18 @@
 
     <tr *ngFor='let book of uiResponse'>
       <td>{{book.id}}</td>
-      <td>{{book.category}}</td>
-      <td>{{book.author}}</td>
-      <td>{{book.price}}</td>
-      <td>{{book.image}}</td>
-      <td>{{book.content}}</td>
       <td>{{book.title}}</td>
+      <td>{{book.category}}</td>
+      <td>{{book.image}}</td>
+      <td>{{book.price}}</td>
       <td>{{book.publisher}}</td>
+      <td>{{book.active}}</td>
+      <td>{{book.content}}</td>
+      <td>{{book.author}}</td>
       <td>{{book.publishdate}}</td>
       <td>{{book.isblock}}</td>
+    
+
     </tr>
   <!-- </li> -->
 
@@ -103,7 +106,13 @@
       <li *ngFor='let book of uiResponse'> {{book.id}} - {{book.category}} - {{book.author}}- {{book.price}}- {{book.image}}-
         {{book.content}}- {{book.title}}- {{book.publisher}}</li>
     </div> -->
+    <div>
+      <!-- <button class="btn btn-primary" type="button" href="http://localhost:4200/buybook">BuyBook</button> -->
+      <a class="btn btn-primary" href="http://localhost:4200/buybook">BuyBook</a>
+    </div>
   </table>
+
+  
   
 </body>
 

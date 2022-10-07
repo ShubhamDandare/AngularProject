@@ -12,37 +12,25 @@
             <form class="px-md-2">
 
               <div class="form-outline mb-4">
-                <input type="text" [(ngModel)]="user.username"  placeholder="username"  id="form3Example1q" class="form-control" />
+                <input type="text" [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}" placeholder="username"  id="form3Example1q" class="form-control" />
                 <label class="form-label" for="form3Example1q">username</label>
               </div>
 
               <div class="form-outline mb-4">
-                <input type="password" [(ngModel)]="user.password"  placeholder="password" id="form3Example4cg" class="form-control form-control-lg" />
+                <input type="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" placeholder="password" id="form3Example4cg" class="form-control form-control-lg" />
                 <label class="form-label" for="form3Example4cg">Password</label>
               </div>
 
-              <div class="col-md-4 mb-3">
-                <label for="validationCustomUsername">Email</label>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                  </div>
-                  <input type="text" [(ngModel)]="user.email" class="form-control" id="validationCustomUsername"
-                   placeholder="Email" aria-describedby="inputGroupPrepend" required>
-                  <div class="invalid-feedback">
-                    Please choose a Email.
-                  </div>
-                </div>
+              <div class="form-outline mb-4">
+                <input type="email" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" placeholder="email" id="inputGroupPrepend" class="form-control form-control-lg" />
+                <label class="form-label" for="form3Example4cg">Email</label>
               </div>
-              <div class="mb-4">
 
-                <select class="select">
-                  <option value="1" >Roles</option>
-                  <option value="2">USER_AUTHOR</option>
-                  <option value="3">USER_READER</option>
-                </select>
-
+              <div class="form-outline mb-4">
+                <input type="text" [(ngModel)]="user.role" [ngModelOptions]="{standalone: true}" placeholder="role" id="validationCustomUsername" class="form-control form-control-lg" />
+                <label class="form-label" for="form3Example4cg">Role</label>
               </div>
+
 
               <button class="btn btn-success btn-lg mb-1" type="button" (click)="SignUp()" >signup</button>
 
